@@ -1,0 +1,133 @@
+/* CSS declarations go here */
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('karbon-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('karbon-light-webfont.woff') format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('karbon-regular-webfont.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('karbon-semibold-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+.transition(@property, @duration, @timing-function) {
+	-webkit-transition: @property @duration @timing-function;
+	-moz-transition: @property @duration @timing-function;
+	-o-transition: @property @duration @timing-function;
+	transition: @property @duration @timing-function;
+}
+
+.small-caps {
+	font-family: "Karbon",helvetica,sans-serif;
+	font-size: 10px;
+	letter-spacing: 1px;
+	line-height: 10px;
+	text-transform: uppercase;
+}
+
+.background-transition{
+	.transition(background-color,0.2s,ease-in);
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+img.title-bg {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 200px;
+}
+div.title {
+	text-transform: uppercase;
+	top: 0;
+	font-family: Helvetica, Sans Serif;
+	font-weight: 300;
+	color: white;
+	font-size: 60px;
+	width: 100%;
+	line-height: 200px;
+	text-align: center;
+	position: absolute;
+}
+
+section.madlib {
+	font-size: 14px;
+	width: 700px;
+	margin: 40px auto;
+	margin-top: 240px;
+	line-height: 33px;
+	margin-top: 240px;
+	font-weight: light;
+	font-family: 'Libre Baskerville', georgia, "times new roman", times, serif;
+
+
+	div.field {
+		display: inline-block;
+		position: relative;
+		height: 20px;
+		width: 90px;
+		border-bottom: 1px solid black;
+		margin: 0 3px;
+		div.input {
+			width: 100%;
+			text-align: center;
+
+			&:focus {
+				outline: none;
+				background-color: #F8E71C;
+			}
+		}
+		div.label {
+			.small-caps;
+			position: absolute;
+			top: 25px;
+			text-align: center;
+			width: 100%;
+			
+		}
+	}
+
+	div.wide {
+		width: 200px;
+	}
+
+	div.thin {
+		width: 40px;
+	}
+
+	p {
+		margin: 30px 0;
+	}
+}
+
+div.button {
+	.small-caps;
+	.background-transition;
+	background-color: #e0e5e9;
+	cursor: pointer;
+	margin: 10px auto 0 auto;
+    text-align: center;
+    border-radius: 2px;
+    padding: 8px 8px;
+    line-height: 18px;
+	width: 200px;
+
+	&:hover {
+		background-color: #4A90E2;
+	}
+}
