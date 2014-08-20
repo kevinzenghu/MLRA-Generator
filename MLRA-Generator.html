@@ -13,11 +13,11 @@
     	</p>
 
     	<p>
-		This Thursday is another {{>adj}} opportunity to join your fellow {{>adj}} labmates at the Media Lab {{>adj}} Running Accelerator (ML_RA) for an evening jog. Though we know you’re a very {{>adj}} <div class="field"><div class="input" contenteditable="true"></div><div class="label">Job Title</div></div>, and extremely busy most evenings {{>gerund}}, {{>gerund}}, and burning the midnight <div class="field"><div class="input" contenteditable="true"></div><div class="label">Liquid</div></div> in your lab running {{>noun}} simulations, we believe work/life/<div class="field"><div class="input" contenteditable="true"></div><div class="label">Abstract Idea</div></div> balance is <div class="field"><div class="input" contenteditable="true"></div><div class="label">Adverb</div></div> important. 
+		This Thursday is another {{>noun}} to join your fellow {{>noun}} at the Media Lab {{>adj}} Running Accelerator for an evening jog. Though we know you’re a very {{>adj}} <div class="field"><div class="input" contenteditable="true"></div><div class="label">Job Title</div></div>, and extremely busy most evenings {{>gerund}}, {{>gerund}}, and burning the midnight <div class="field"><div class="input" contenteditable="true"></div><div class="label">Liquid</div></div> in your lab running {{>noun}} simulations, we believe work/life/<div class="field"><div class="input" contenteditable="true"></div><div class="label">Abstract Idea</div></div> balance is <div class="field"><div class="input" contenteditable="true"></div><div class="label">Adverb</div></div> important. 
     	</p>
 
     	<p>
-		Here’s a case study: {{>your_name}} had spent nearly <div class="field"><div class="input" contenteditable="true"></div><div class="label">Big Number</div></div> hours straight in their lab after receiving a curt, <div class="field"><div class="input" contenteditable="true"></div><div class="label">Small Number</div></div>-word email form their advisor, surviving on sweet-n-low packets, <div class="field"><div class="input" contenteditable="true"></div><div class="label">Food</div></div> from food cam, and <div class="field"><div class="input" contenteditable="true"></div><div class="label">Small Animal</div></div> hunted in City Farm. Fortunately, at the urging of a(n) {{>adj}} friend, {{>your_name}} decided to put the thesis and the {{>noun}} aside and join friends at the MLRA for an evening run all the way to <div class="field"><div class="input" contenteditable="true"></div><div class="label">Place Nearby</div></div>. While on the jog, <div class="field"><div class="input" contenteditable="true"></div><div class="label">Your Name</div></div> had a breakthrough in their research on the human-{{>noun}} interface, and went on to finish their thesis titled “Development and Validation of {{>noun}} as {{>noun}} : <div class="field wide"><div class="input" contenteditable="true"></div><div class="label">Favorite Movie Line</div></div>”, work that earned {{>your_name}} the prestigious Forbes Most {{>adj}} <div class="field thin"><div class="input" contenteditable="true"></div><div class="label">Number</div></div> under <div class="field thin"><div class="input" contenteditable="true"></div><div class="label">Number</div></div>, and worked through their childhood fear of <div class="field wide"><div class="input" contenteditable="true"></div><div class="label">Noun that would Make a Lame Gift</div></div>. 
+		Here’s a case study: {{>your_name}} had spent nearly <div class="field"><div class="input" contenteditable="true"></div><div class="label">Big Number</div></div> hours straight in their lab after receiving a curt, <div class="field"><div class="input" contenteditable="true"></div><div class="label">Small Number</div></div>-word email form their advisor, surviving on sweet-n-low packets, <div class="field"><div class="input" contenteditable="true"></div><div class="label">Food</div></div> from food cam, and <div class="field"><div class="input" contenteditable="true"></div><div class="label">Small Animal</div></div> hunted in City Farm. Fortunately, at the urging of a {{>adj}} friend, {{>your_name}} decided to put the thesis and the {{>noun}} aside and join friends at the MLRA for an evening run all the way to <div class="field"><div class="input" contenteditable="true"></div><div class="label">Place Nearby</div></div>. While on the jog, <div class="field"><div class="input" contenteditable="true"></div><div class="label">Your Name</div></div> had a breakthrough in their research on the human-{{>noun}} interface, and went on to finish their thesis titled “Development and Validation of {{>noun}} as {{>noun}} : <div class="field wide"><div class="input" contenteditable="true"></div><div class="label">Favorite Movie Line</div></div>”, work that earned {{>your_name}} the prestigious <div class="field"><div class="input" contenteditable="true"></div><div class="label">ML Sponsor</div></div> Most {{>adj}} <div class="field thin"><div class="input" contenteditable="true"></div><div class="label">Number</div></div> under <div class="field thin"><div class="input" contenteditable="true"></div><div class="label">Number</div></div>, and worked through their childhood fear of <div class="field wide"><div class="input" contenteditable="true"></div><div class="label">Noun that would Make a Lame Gift</div></div>. 
     	</p>
 
     	<p>
@@ -25,14 +25,46 @@
     	</p>
 
     	<p>
-   		Savannah Niles and Kevin Hu
+   		Savannah Niles and Kevin Hu and Matthew Hirsch
    		<div class="field"><div class="input" contenteditable="true"></div><div class="label">Buzzword</div></div> Storytellers and <div class="field"><div class="input" contenteditable="true"></div><div class="label">Web Technology</div></div><div class="field"><div class="input" contenteditable="true"></div><div class="label">Archaic Fighters</div></div>
     	</p>
 	</section>
+	{{> button}}
+
+	<section class="madlib">
+		{{> result}}
+	</section>
+</body>
+
+<template name="result">
+	{{#with inputs}}
+	<p>
+	Hello, Media Lab and Friends:
+	</p>
+	
+	<p>
+	This Thursday is another {{this.[0]}} opportunity to join your fellow {{this.[1]}} labmates at the Media Lab {{this.[2]}} Running Accelerator for an evening jog. Though we know you’re a very {{this.[3]}} {{this.[4]}}, and extremely busy most evenings {{this.[5]}}, {{this.[6]}}, and burning the midnight {{this.[7]}} in your lab running {{this.[8]}} simulations, we believe work/life/{{this.[9]}} balance is {{this.[10]}} important.
+	</p>
+
+	<p>
+	Here’s a case study: {{this.[11]}} had spent nearly {{this.[12]}} hours straight in their lab after receiving a curt, {{this.[13]}}-word email form their advisor, surviving on sweet-n-low packets, {{this.[14]}} from food cam, and {{this.[15]}} hunted in City Farm. Fortunately, at the urging of {{this.[16]}} friends, {{this.[17]}} decided to put the thesis and the {{this.[18]}} aside and join friends at the MLRA for an evening run all the way to {{this.[19]}}. While on the jog, {{this.[20]}} had a breakthrough in their research on the human-{{this.[21]}} interface, and went on to finish their thesis titled “Development and Validation of {{this.[22]}} as {{this.[23]}}: {{this.[24]}}”, work that earned {{this.[25]}} the prestigious {{this.[26]}} Most {{this.[27]}} {{this.[28]}} under {{this.[29]}}, and worked through their childhood fear of {{this.[30]}}.
+	</p>
+
+	<p>
+	Jogging is good for the mind, {{this.[31]}} and spirit. So join {{this.[32]}} and your friends at the MLRA this Thursday at 5:30 for an equally {{this.[33]}} experience.
+</p>
+
+	Savannah Niles and Kevin Hu<br>
+	{{this.[34]}} Storytellers and {{this.[35]}} {{this.[36]}}
+	{{/with}}
+</template>
+
+
+<template name="button">
 	<div class="button">
 		Create Your MLRA E-mail!
 	</div>
-</body>
+</template>
 
 <template name="your_name">
 	<div class="field"><div class="input" contenteditable="true"></div><div class="label">Your Name</div></div>
