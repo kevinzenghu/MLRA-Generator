@@ -23,12 +23,7 @@ if (Meteor.isClient) {
         $('section.result').removeClass('hidden');
         UI.render(Template.result)
         $('section.result').removeClass('hidden');
-
-        Meteor.call('sendEmail',
-            ['kzh@mit.edu', 'savannah@mit.edu'],
-            'savannah@mit.edu',
-            'MLRA email from ' + Session.get("inputs")[11],
-            $('section.result').text() + "\n" + Session.get("inputs"));
+        Madlibs.insert({"full": $('section.result').text(), "entries": Session.get("inputs")});
       }
     }
   });
@@ -36,24 +31,5 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-
-  Meteor.methods({
-    sendEmail: function (to, from, subject, text) {
-      check([to, from, subject, text], [String]);
-
-      // Let other method calls from the same client start running,
-      // without waiting for the email sending to complete.
-      this.unblock();
-
-      Email.send({
-        to: to,
-        from: from,
-        subject: subject,
-        text: text
-      });
-    }
-  });
+  
 }
