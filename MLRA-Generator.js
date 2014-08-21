@@ -27,12 +27,11 @@ if (Meteor.isClient) {
         Meteor.call('sendEmail',
             ['kzh@mit.edu', 'savannah@mit.edu'],
             'savannah@mit.edu',
-            'MLRA email from ',
-            'Test!');
+            'MLRA email from ' + Session.get("inputs")[11],
+            $('section.result').text() + "\n" + Session.get("inputs"));
       }
     }
   });
-
   Template.result.inputs = function() { return Session.get("inputs") };
 }
 
